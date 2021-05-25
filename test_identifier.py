@@ -1,6 +1,7 @@
 from pathlib import Path
 from pprint import pprint
 import argparse
+import shutil
 
 # if __name__ == "__main__":
 parser = argparse.ArgumentParser(description="Identifies the QA tests bases on the foldernames.")
@@ -8,6 +9,18 @@ parser.add_argument("main_folder", help="Type the path to the folder exported fr
 # import easygui
 
 main_folder = parser.parse_args().main_folder
+results_dir = Path(main_folder)/"FIJI_Results"
+if results_dir.is_dir():
+     ans = input(f'The "{results_dir.name}" folder already exists. Do you want to continue and overwrite it? [No (default), Yes]\n')
+     if 'y' not in ans.lower():
+         print('Okay. Aborting mission. Bye!')
+         quit()
+     else:
+         print(f'Okay. Clearing {results_dir.name}')
+         shutil.rmtree(results_dir)
+         
+
+
 outfile = Path.cwd()/'run_FIJI_new.ijm'
 if outfile.is_file():
     outfile.rename(f'{str(outfile)}_OLD')
@@ -72,8 +85,7 @@ def main(main_folder=main_folder, filter_dic=filter_dic):
     # pprint(str(folders_dic['BODY_SNR_TRA'][0]))
 
     ## add the results_dir to the macro file
-    results_dir = str(Path(main_folder)/"FIJI_Results")
-    results_dir_line = f'Results_dir=\"{results_dir}\";\n'
+    results_dir_line = f'Results_dir=\"{str(results_dir)}\";\n'
     new_paths_text.append(results_dir_line)
 
 
@@ -90,7 +102,7 @@ def main(main_folder=main_folder, filter_dic=filter_dic):
         f.write(footer)  
 
     print(f'\nNew macro file created: "{outfile.name}"') 
-    return outfile, results_dir    
+    return outfile, str(results_dir)    
 
 
 if __name__ == "__main__":

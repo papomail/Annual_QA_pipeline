@@ -2,8 +2,8 @@
 close("*");
 roiManager("reset");
 
-//script_path=getDirectory("current");
-script_path = "/Users/papo/Sync/Projects/Annual_QA_pipeline/MagNET_QA_scripts/";
+current=getDirectory("current");
+script_path = current+"/MagNET_QA_scripts/";
 print(script_path)
 home_path=getDirectory("home");
 

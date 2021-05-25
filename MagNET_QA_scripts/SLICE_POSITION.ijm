@@ -188,6 +188,7 @@ for (i = 0; i < 27; i++) {
 	//run("Previous Slice [<]");
 	setSlice(i+1);
 	//run("Duplicate...", "use");
+	wait(10);
 	run("Analyze Particles...", "size=1-30 circularity=0.10-1.00 exclude summarize slice clear");
 	
 	counts = nResults(); 
@@ -215,9 +216,9 @@ roiManager("reset");
 
 for (i=0; i<slice.length ; i++) {
 	selectWindow("edgeRods");
-	wait(10);
+	wait(20);
 	setSlice(slice[i]);
-	wait(10);
+	wait(20);
 	run("Analyze Particles...", "size=1-30 circularity=0.10-1.00 exclude summarize slice clear");
 			
 	for (j = 0; j < 4; j++) {
@@ -229,9 +230,9 @@ for (i=0; i<slice.length ; i++) {
 	
 	
 	selectWindow(myimage);
-	wait(10);
+	wait(20);
 	setSlice(slice[i]);
-	wait(10);
+	wait(20);
 	
 	makeLine(xpos[0], ypos[0], xpos[1], ypos[1]);
 	roiManager("add");
@@ -244,7 +245,7 @@ for (i=0; i<slice.length ; i++) {
 
    
 		//setLocation(1,1,1028,1028);
-		//wait(100);
+		//wait(50);
 		//myscreenshot=screenshot_dir+File.separator+myimage+"_sl"+(i+1)+".png";
 		//exec("screencapture", myscreenshot);
 		//setLocation(1,1,300,300);
