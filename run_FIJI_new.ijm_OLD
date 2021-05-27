@@ -7,25 +7,25 @@ script_path = current+"/MagNET_QA_scripts/";
 print(script_path)
 home_path=getDirectory("home");
 
-BC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/BC_SNR_TRA_4";
-BC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/BC_SNR_TRA_3";
-BC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/BC_SNR_COR_6";
-BC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/BC_SNR_COR_5";
-BC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/BC_SNR_SAG_8";
-BC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/BC_SNR_SAG_7";
-HNC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/HNC_SNR_TRA_19";
-HNC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/HNC_SNR_TRA_18";
-HNC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/HNC_SNR_COR_21";
-HNC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/HNC_SNR_COR_20";
-HNC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/HNC_SNR_SAG_23";
-HNC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/HNC_SNR_SAG_22";
-GEOMETRY_TRA = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/BC_GEO_TRA_12";
-GEOMETRY_COR = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/BC_GEO_COR_14";
-GEOMETRY_SAG = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/BC_GEO_SAG_16";
-SLICE_POS = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/BC_SP_TRA_10";
-GHOSTING_1 = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/HNC_GHO_TRA_2AVE_26";
-GHOSTING_2 = "/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/Sequence_Region_Siemens_Sequences _1/HNC_GHO_TRA_1AVE_25";
-Results_dir="/Users/papo/Sync/MRdata/QA/LCD_AERA/LDC_AERA_2021/Annual_Qa_2021/FIJI_Results";
+BC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_SNR_TRA_8";
+BC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_SNR_TRA_9";
+BC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_SNR_COR_10";
+BC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_SNR_COR_11";
+BC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_SNR_SAG_12";
+BC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_SNR_SAG_13";
+HNC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/HNC_SNR_TRA_28";
+HNC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/HNC_SNR_TRA_29";
+HNC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/HNC_SNR_COR_25";
+HNC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/HNC_SNR_COR_24";
+HNC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/HNC_SNR_SAG_27";
+HNC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/HNC_SNR_SAG_26";
+GEOMETRY_TRA = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_GEO_TRA_17";
+GEOMETRY_COR = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_GEO_COR_19";
+GEOMETRY_SAG = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_GEO_SAG_21";
+SLICE_POS = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_SP_TRA_15";
+GHOSTING_1 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/HNC_GHO_TRA_31";
+GHOSTING_2 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/HNC_GHO_TRA_2AVE_32";
+Results_dir="/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/FIJI_Results";
 
 
 //Create Results_dir folder

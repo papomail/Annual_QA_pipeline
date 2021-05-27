@@ -1,24 +1,7 @@
 from pathlib import Path
 from pprint import pprint
-import argparse
 import shutil
-
-# if __name__ == "__main__":
-parser = argparse.ArgumentParser(description="Identifies the QA tests bases on the foldernames.")
-parser.add_argument("main_folder", help="Type the path to the folder exported from Horos that contains all the QA data.")
-# import easygui
-
-main_folder = parser.parse_args().main_folder
-results_dir = Path(main_folder)/"FIJI_Results"
-if results_dir.is_dir():
-     ans = input(f'The "{results_dir.name}" folder already exists. Do you want to continue and overwrite it? [No (default), Yes]\n')
-     if 'y' not in ans.lower():
-         print('Okay. Aborting mission. Bye!')
-         quit()
-     else:
-         print(f'Okay. Clearing {results_dir.name}')
-         shutil.rmtree(results_dir)
-         
+import easygui
 
 
 outfile = Path.cwd()/'run_FIJI_new.ijm'
@@ -44,13 +27,24 @@ filter_dic = {
     'SLICE_POS':['bc', 'sp'],
 
     #Ghosting
-    'GHOSTING':['gho_'],
-    
-    
+    'GHOSTING':['gho_'], 
 }
-# print(filter_dic)
 
 
+def check_results_exist(main_folder):
+    results_dir = Path(main_folder)/"FIJI_Results"
+    if results_dir.is_dir():
+        ans = easygui.ynbox(msg=f'The "{results_dir.name}" folder already exists. Do you want to continue and overwrite it?',default_choice='No', cancel_choice='No')
+        if ans:
+            print(f'Okay. Clearing {results_dir.name}')
+            shutil.rmtree(results_dir)
+        else:
+            easygui.msgbox(msg = 'Okay. Clearing {results_dir.name}')
+            print('Okay. Aborting mission. Bye!')
+            quit()
+    return results_dir       
+
+               
 
 def filter_files(filter,files):
     new_files = [file for file in files if filter in str(file.name).lower()]  
@@ -64,7 +58,8 @@ def find_folder(filters,main_folder):
 
 
 
-def main(main_folder=main_folder, filter_dic=filter_dic):
+def main(main_folder, filter_dic=filter_dic):
+    results_dir = check_results_exist(main_folder)
     new_paths_text = []
     folders_dic = {}
     for key in filter_dic:

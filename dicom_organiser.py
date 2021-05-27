@@ -1,0 +1,45 @@
+import easygui
+from pathlib import Path
+import pydicom
+import shutil
+
+# easygui.ynbox('Shall I continue?', 'Title', ('Yes', 'No'))
+
+def sort_dicoms():
+    my_msg ='Please select the folder containing the QA data'
+    main_folder = Path(easygui.diropenbox(msg=my_msg, title=my_msg, default=Path.home()/'Sync/MRdata/QA' ))
+    in_folders = [fol for fol in main_folder.rglob('*') if fol.is_dir()]
+    dicom_folder = []
+    for fol in in_folders:
+        if fol.name.lower() == 'dicom':
+            dicom_folder.append(fol)
+
+    if len(dicom_folder) == 1:
+        dicom_folder = dicom_folder[0]
+    elif len(dicom_folder) > 1:
+        raise Exception(f'{len(dicom_folder)} DICOM folders found. Please choose one dataset at a time.')
+    else:
+        raise Exception(f'{len(dicom_folder)} DICOM folders found.')
+
+    print(f'\nDICOM folder = {dicom_folder}')
+
+    for file in dicom_folder.rglob('*'):
+        if file.is_file():
+            try:
+                ds = pydicom.dcmread(str(file))
+            except:
+                continue
+            protocol_name = ds[0x18,0x1030].value
+            series_number = ds.SeriesNumber
+            organised_folder =main_folder/'DATA'
+            protocol_folder = organised_folder/f'{protocol_name}_{series_number}'
+            protocol_folder.mkdir( parents=True, exist_ok=True)
+            shutil.copy(file, f'{protocol_folder/file.name}.dcm') 
+
+    print(f'\nDICOM files from {main_folder.name} are organised inside the {main_folder.name}/DATA folder.') # For newer Python.
+    return organised_folder
+
+
+    
+
+
