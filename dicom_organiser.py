@@ -1,4 +1,4 @@
-import easygui
+import easygui_qt
 from pathlib import Path
 import pydicom
 import shutil
@@ -7,7 +7,8 @@ import shutil
 
 def sort_dicoms():
     my_msg ='Please select the folder containing the QA data'
-    main_folder = Path(easygui.diropenbox(msg=my_msg, title=my_msg, default=Path.home()/'Sync/MRdata/QA' ))
+    # main_folder = Path(easygui.diropenbox(msg=my_msg, title=my_msg, default=Path.home()/'Sync/MRdata/QA' ))
+    main_folder = Path(easygui_qt.get_directory_name(title=my_msg))
     in_folders = [fol for fol in main_folder.rglob('*') if fol.is_dir()]
     dicom_folder = []
     for fol in in_folders:
@@ -17,15 +18,12 @@ def sort_dicoms():
     if len(dicom_folder) == 1:
         dicom_folder = dicom_folder[0]
     elif len(dicom_folder) > 1:
-        # raise Exception(f'{len(dicom_folder)} DICOM folders found. Please choose one dataset at a time.')
-        easygui.exceptionbox(f'{len(dicom_folder)} DICOM folders found. Please choose one dataset at a time.')
+        easygui_qt.handle_exception(f'{len(dicom_folder)} DICOM folders found. Please choose one dataset at a time.')
 
     elif len(dicom_folder) == 0:
-        # raise Exception(f'{len(dicom_folder)} DICOM folders found.')
-        try_in_main_folder = easygui.ccbox(f'No DICOM folders found.\nShall I continue to check for dcm files inside {main_folder.name}?')
-        # try_in_main_folder = easygui.ynbox(f'No DICOM folders found.\nShall I check for dcm files inside {main_folder.name}?')
-
-        if try_in_main_folder:
+       
+        # if easygui.ccbox(f'No DICOM folders found.\nShall I continue to check for dcm files inside {main_folder.name}?'):
+        if easygui_qt.get_continue_or_cancel(f'No DICOM folders found.\nShall I continue to check for dcm files inside {main_folder.name}?'):
             dicom_folder = main_folder
         else:
             quit()  

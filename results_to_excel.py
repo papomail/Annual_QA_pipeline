@@ -2,7 +2,7 @@
 from pathlib import Path
 import pandas as pd
 from openpyxl import load_workbook
-
+import easygui_qt
 
 filter_dic = {
     #Body Coil SNR
@@ -163,7 +163,7 @@ def main(search_in, filter_dic=filter_dic):
     # print(f'Copying all FIJI results into the main excel sheet...')
     # fiji = pd.read_excel(results_sheet)
     # write_to_excel(fiji,template_sheet, sheet_name="FIJI_Results", index=False, header=False)
-    print(f'Done! Now copy the results in {results_sheet} to the template excel sheet.')
+    easygui_qt.show_message(message=f'Done!\n Now copy the results in {results_sheet} into the template excel sheet.')
 
 
 if __name__ == "__main__":
