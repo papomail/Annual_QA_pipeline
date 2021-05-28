@@ -1,4 +1,3 @@
-import argparse
 import os
 import dicom_organiser
 import test_identifier
