@@ -201,14 +201,16 @@ for (i = 0; i < 27; i++) {
 	
 
 	};
+	
+
 slice=Array.deleteValue(slice, 0);
 
-print("The slices to take meassures from are:");
+print("The slices to take measures from are:");
 Array.print(slice);
 
 
 
-// meassure the distance between edge rods (control)
+// measure the distance between edge rods (control)
 xpos=newArray(4);
 ypos=newArray(4);
 roiManager("reset");

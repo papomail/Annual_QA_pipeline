@@ -7,25 +7,25 @@ script_path = current+"/MagNET_QA_scripts/";
 print(script_path)
 home_path=getDirectory("home");
 
-BC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_SNR_TRA_8";
-BC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_SNR_TRA_9";
-BC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_SNR_COR_10";
-BC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_SNR_COR_11";
-BC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_SNR_SAG_12";
-BC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_SNR_SAG_13";
-HNC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/HNC_SNR_TRA_28";
-HNC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/HNC_SNR_TRA_29";
-HNC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/HNC_SNR_COR_25";
-HNC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/HNC_SNR_COR_24";
-HNC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/HNC_SNR_SAG_27";
-HNC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/HNC_SNR_SAG_26";
-GEOMETRY_TRA = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_GEO_TRA_17";
-GEOMETRY_COR = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_GEO_COR_19";
-GEOMETRY_SAG = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_GEO_SAG_21";
-SLICE_POS = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/BC_SP_TRA_15";
-GHOSTING_1 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/HNC_GHO_TRA_31";
-GHOSTING_2 = "/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/HNC_GHO_TRA_2AVE_32";
-Results_dir="/Users/papo/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/FIJI_Results";
+BC_SNR_TRA_1 = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/SE_BC_SNR_TRA_1_12";
+BC_SNR_TRA_2 = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/SE_BC_SNR_TRA_2_13";
+BC_SNR_COR_1 = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/SE_BC_SNR_COR_1_17";
+BC_SNR_COR_2 = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/SE_BC_SNR_COR_2_18";
+BC_SNR_SAG_1 = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/SE_BC_SNR_SAG_2_16";
+BC_SNR_SAG_2 = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/SE_BC_SNR_SAG_1_15";
+HNC_SNR_TRA_1 = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/SE_HNC_SNR_TRA_1_2";
+HNC_SNR_TRA_2 = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/SE_HNC_SNR_TRA_2_3";
+HNC_SNR_COR_1 = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/SE_HNC_SNR_COR_2_7";
+HNC_SNR_COR_2 = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/SE_HNC_SNR_COR_1_6";
+HNC_SNR_SAG_1 = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/SE_HNC_SNR_SAG_1_4";
+HNC_SNR_SAG_2 = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/SE_HNC_SNR_SAG_2_5";
+GEOMETRY_TRA = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/SE_BC_GEO_L_TRA_59";
+GEOMETRY_COR = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/SE_BC_GEO_L_COR_57";
+GEOMETRY_SAG = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/SE_BC_GEO_L_SAG_54";
+SLICE_POS = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/SE_BC_SP_TRA_61";
+GHOSTING_1 = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/MULTIECHOSE_HNC_GHO_TRA_NSA2_50";
+GHOSTING_2 = "/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/MULTIECHOSE_HNC_GHO_TRA_NSA1_49";
+Results_dir="/Users/papo/Documents/QA and Acceptance Tests/PETMR_QA_20181029_Pat/hierarchixca/DATA/DATA/FIJI_Results";
 
 
 //Create Results_dir folder

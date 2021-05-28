@@ -1,3 +1,4 @@
+from logging import exception
 from pathlib import Path
 from pprint import pprint
 import shutil
@@ -74,7 +75,11 @@ def main(main_folder, filter_dic=filter_dic):
             line = f'{key}_2 = \"{str(folders_dic[key][1])}\";\n'
             new_paths_text.append(line)
         else:
-            line = f'{key} = \"{str(folders_dic[key][0])}\";\n'
+
+            try:
+                line = f'{key} = \"{str(folders_dic[key][0])}\";\n'
+            except:
+                raise Exception(f'{folders_dic=}, {key=}')    
             new_paths_text.append(line)
 
     # pprint(str(folders_dic['BODY_SNR_TRA'][0]))

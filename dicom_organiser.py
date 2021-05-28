@@ -17,10 +17,16 @@ def sort_dicoms():
     if len(dicom_folder) == 1:
         dicom_folder = dicom_folder[0]
     elif len(dicom_folder) > 1:
-        raise Exception(f'{len(dicom_folder)} DICOM folders found. Please choose one dataset at a time.')
-    else:
-        raise Exception(f'{len(dicom_folder)} DICOM folders found.')
+        # raise Exception(f'{len(dicom_folder)} DICOM folders found. Please choose one dataset at a time.')
+        easygui.exceptionbox(f'{len(dicom_folder)} DICOM folders found. Please choose one dataset at a time.')
 
+    else:
+        # raise Exception(f'{len(dicom_folder)} DICOM folders found.')
+        try_in_main_folder = easygui.ccbox(f'{len(dicom_folder)} DICOM folders found. Shall I continue to check for dcm files inside {main_folder.name}?')
+        if try_in_main_folder:
+            dicom_folder = main_folder
+        else:
+            quit()    
     print(f'\nDICOM folder = {dicom_folder}')
 
     for file in dicom_folder.rglob('*'):
@@ -30,9 +36,19 @@ def sort_dicoms():
             except:
                 continue
             protocol_name = ds[0x18,0x1030].value
+
+            ''' Change protocol name to match the nomenclature in FIJI scripts'''
+            protocol_name = protocol_name.upper().replace('_BODY_','_BC_')
+            protocol_name = protocol_name.upper().replace('_HEAD_','_HNC_')
+            protocol_name = protocol_name.upper().replace('_SLICE_POSITION_','_SP_')
+            protocol_name = protocol_name.upper().replace('_GHOSTING_','_GHO_')
+            protocol_name = protocol_name.upper().replace('_GEOMETRIC_','_GEO_')
+            protocol_name = protocol_name.upper().replace('_LINEARITY_','_L_')
+
             series_number = ds.SeriesNumber
             organised_folder =main_folder/'DATA'
             protocol_folder = organised_folder/f'{protocol_name}_{series_number}'
+
             protocol_folder.mkdir( parents=True, exist_ok=True)
             shutil.copy(file, f'{protocol_folder/file.name}.dcm') 
 
