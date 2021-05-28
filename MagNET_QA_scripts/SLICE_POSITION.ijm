@@ -201,9 +201,23 @@ for (i = 0; i < 27; i++) {
 	
 
 	};
-	
 
-slice=Array.deleteValue(slice, 0);
+print("Pre-cleaned slices with 6 results are:");
+Array.print(slice);
+
+// make sure the slices are contiguous
+dif = newArray(slice.length-1);	
+for (i=0; i<slice.length-1; i++) {
+	dif[i] = slice[i+1] - slice[i];
+	};
+
+for (i=0; i<dif.length-1; i++) {
+	if (dif[i] != 1) {
+		slice = Array.slice(slice,0,i+1);
+		i = 1000;
+		}
+	};
+
 
 print("The slices to take measures from are:");
 Array.print(slice);

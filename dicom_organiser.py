@@ -20,13 +20,16 @@ def sort_dicoms():
         # raise Exception(f'{len(dicom_folder)} DICOM folders found. Please choose one dataset at a time.')
         easygui.exceptionbox(f'{len(dicom_folder)} DICOM folders found. Please choose one dataset at a time.')
 
-    else:
+    elif len(dicom_folder) == 0:
         # raise Exception(f'{len(dicom_folder)} DICOM folders found.')
-        try_in_main_folder = easygui.ccbox(f'{len(dicom_folder)} DICOM folders found. Shall I continue to check for dcm files inside {main_folder.name}?')
+        try_in_main_folder = easygui.ccbox(f'No DICOM folders found.\nShall I continue to check for dcm files inside {main_folder.name}?')
+        # try_in_main_folder = easygui.ynbox(f'No DICOM folders found.\nShall I check for dcm files inside {main_folder.name}?')
+
         if try_in_main_folder:
             dicom_folder = main_folder
         else:
-            quit()    
+            quit()  
+
     print(f'\nDICOM folder = {dicom_folder}')
 
     for file in dicom_folder.rglob('*'):
