@@ -2,10 +2,11 @@
 close("*");
 roiManager("reset");
 
+current=getDirectory("current");
+script_path = current+"/MagNET_QA_scripts/";
+print(script_path)
 home_path=getDirectory("home");
 
-script_path = "/Users/patxi/Sync/Projects/Annual_QA_pipeline/automatedAQA/MagNET_QA_scripts/" 
-print(script_path) ;
 BC_SNR_TRA_1 = "/Users/patxi/Sync/MRdata/QA/QA_PORTLAND/Portland2020/DATA/BC_SNR_TRA_5";
 BC_SNR_TRA_2 = "/Users/patxi/Sync/MRdata/QA/QA_PORTLAND/Portland2020/DATA/BC_SNR_TRA_6";
 BC_SNR_COR_1 = "/Users/patxi/Sync/MRdata/QA/QA_PORTLAND/Portland2020/DATA/BC_SNR_COR_8";

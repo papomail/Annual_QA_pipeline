@@ -62,6 +62,15 @@ def find_folder(filters,main_folder):
 def main(main_folder, filter_dic=filter_dic):
     results_dir = check_results_exist(main_folder)
     new_paths_text = []
+    
+    
+    # add MACRO location
+    script_path_line = f'script_path = "{str(Path(__file__).resolve().parent)}/MagNET_QA_scripts/" \n'
+    new_paths_text.append(script_path_line)
+
+    print_script_path_line = 'print(script_path) ;\n'
+    new_paths_text.append(print_script_path_line)
+
     folders_dic = {}
     for key in filter_dic:
         test_folders = find_folder(filter_dic[key],main_folder) 
