@@ -1,5 +1,5 @@
 *.png
-!./icons/*.png
+!/icons/*.png
 *.csv
 easygui-master
 __pycache__
