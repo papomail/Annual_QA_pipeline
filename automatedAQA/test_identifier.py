@@ -2,7 +2,7 @@ from logging import exception
 from pathlib import Path
 from pprint import pprint
 import shutil
-import easygui
+import easygui_qt
 
 
 outfile = Path.cwd()/'run_FIJI_new.ijm'
