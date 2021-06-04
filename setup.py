@@ -26,7 +26,7 @@ setup(
     },
     include_package_data=True,
     entry_points={
-        'console_scripts': ['aaqa=scripts.automated_AQA:main']
+        'console_scripts': ['aaqa=AutomatedAQA.scripts.automated_AQA:main']
     }    
 
 )
