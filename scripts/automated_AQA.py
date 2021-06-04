@@ -1,8 +1,9 @@
 import os
-# import dicom_organiser
-# import test_identifier
-# import results_to_excel
-from aaqa import dicom_organiser, test_identifier, results_to_excel
+
+try:
+    import dicom_organiser, test_identifier, results_to_excel
+except:    
+    from Automated_AQA import dicom_organiser, test_identifier, results_to_excel
 
 
 # if __name__ == "__main__":
