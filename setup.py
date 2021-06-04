@@ -18,7 +18,7 @@ setup(
     ],
     setup_requires=['pytest-runner', 'flake8'],
     tests_require=['pytest'],
-    # package_dir={'Automated_AQA':'scripts'},
+    package_dir={'scripts'},
     package_data={
         'scripts.MagNET_QA_scripts':['*'],
         'scripts':['*'],
