@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='AutomatedAQA',
+    name='automatedAQA',
     version='0.9',
     description='Automated Annual QA is a set of scripts aimed to eliminate the repetitive manual labour and to improve the reproducibility of the Quality Control data analysis for MRI scanners',
     author='Patxi Torrealdea ',
@@ -18,15 +18,15 @@ setup(
     ],
     setup_requires=['pytest-runner', 'flake8'],
     tests_require=['pytest'],
-    package_dir={'AutomatedAQA':'scripts'},
+    # package_dir={'AutomatedAQA':'scripts'},
     package_data={
-        'scripts.MagNET_QA_scripts':['*'],
-        'scripts':['*'],
+        'automatedAQA.scripts.MagNET_QA_scripts':['*'],
+        'automatedAQA.scripts':['*'],
  
     },
     include_package_data=True,
     entry_points={
-        'console_scripts': ['aaqa=AutomatedAQA.scripts.automated_AQA:main']
+        'console_scripts': ['aaqa=automatedAQA.scripts.automated_AQA:main']
     }    
 
 )
