@@ -88,11 +88,11 @@ def main(main_folder, filter_dic=filter_dic):
     results_dir_line = f'Results_dir=\"{str(results_dir)}\";\n'
     new_paths_text.append(results_dir_line)
 
-
-    with open('ijm_template_header','r') as f:
+    
+    with open(Path(__file__).resolve().parent/'ijm_template_header','r') as f:
         header = f.read()
 
-    with open('ijm_template_footer','r') as f:
+    with open(Path(__file__).resolve().parent/'ijm_template_footer','r') as f:
         footer = f.read()
 
     complete_text = str([header, new_paths_text,footer])
