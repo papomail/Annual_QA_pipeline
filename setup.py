@@ -21,6 +21,7 @@ setup(
     # package_dir={'aaqa':'scripts'},
     package_data={
         'scripts.MagNET_QA_scripts':['*'],
+        'scripts':['*'],
  
     },
     include_package_data=True,
