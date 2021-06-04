@@ -18,15 +18,15 @@ setup(
     ],
     setup_requires=['pytest-runner', 'flake8'],
     tests_require=['pytest'],
-    # package_dir={'AutomatedAQA':'scripts'},
+    # package_dir={'AutomatedAQA':'AutomatedAQA'},
     package_data={
-        'automatedAQA.scripts.MagNET_QA_scripts':['*'],
-        'automatedAQA.scripts':['*'],
+        'automatedAQA.MagNET_QA_scripts':['*.ijm'],
+        'automatedAQA':['*.ijm', 'ijm_template_header','ijm_template_footer'],
  
     },
     include_package_data=True,
     entry_points={
-        'console_scripts': ['aaqa=automatedAQA.scripts.automated_AQA:main']
+        'console_scripts': ['aaqa=automatedAQA.automated_AQA:main']
     }    
 
 )
