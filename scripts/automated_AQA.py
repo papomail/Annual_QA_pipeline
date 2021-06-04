@@ -3,7 +3,7 @@ import os
 try:
     import dicom_organiser, test_identifier, results_to_excel
 except:    
-    from Automated_AQA import dicom_organiser, test_identifier, results_to_excel
+    from AutomatedAQA import dicom_organiser, test_identifier, results_to_excel
 
 
 # if __name__ == "__main__":
