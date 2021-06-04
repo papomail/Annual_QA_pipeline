@@ -10,11 +10,14 @@ setup(
     packages=find_packages(),
 
     install_requires=[
+        
         "easygui_qt",
 		"pathlib",
 		"pydicom",
 		"pandas",
 		"openpyxl",
+        "PyQt5"
+  
     ],
     setup_requires=['pytest-runner', 'flake8'],
     tests_require=['pytest'],
