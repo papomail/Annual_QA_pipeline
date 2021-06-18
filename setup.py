@@ -25,8 +25,8 @@ setup(
     package_data={
 	    'automatedAQA':['*.ijm', 'ijm_template_header','ijm_template_footer'],
     	    'automatedAQA/automatedAQA':['*.ijm', 'ijm_template_header','ijm_template_footer'],
-	    'automatedAQA/automatedAQA/MagNET_QA_scripts':['*'],
-	    'automatedAQA/icons':['*'],
+	    'automatedAQA/automatedAQA/MagNET_QA_scripts':['*.*'],
+	    'automatedAQA/icons':['*.*'],
 	    
     		},
 	
