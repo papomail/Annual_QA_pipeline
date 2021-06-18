@@ -8,7 +8,7 @@ setup(
     author_email='francisco.torrealdea@nhs.net',
     url='https://github.com/papomail/Annual_QA_pipeline',
     packages=find_packages(),
-
+    use_scm_version=True,
     install_requires=[
         
         "easygui_qt",
@@ -19,14 +19,15 @@ setup(
         "PyQt5"
   
     ],
-    setup_requires=['pytest-runner', 'flake8'],
+    setup_requires=['setuptools_scm', 'pytest-runner', 'flake8'],
     tests_require=['pytest'],
     # package_dir={'automatedAQA':'automatedAQA'},
+	
     package_data={
 	    'automatedAQA':['*.ijm', 'ijm_template_header','ijm_template_footer'],
     	    'automatedAQA/automatedAQA':['*.ijm', 'ijm_template_header','ijm_template_footer'],
-	    'automatedAQA/automatedAQA/MagNET_QA_scripts':['*.*'],
-	    'automatedAQA/icons':['*.*'],
+	    'automatedAQA/automatedAQA/MagNET_QA_scripts':['*.ijm'],
+	    'automatedAQA/icons':['*'],
 	    
     		},
 	
