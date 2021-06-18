@@ -22,11 +22,8 @@ setup(
     setup_requires=['pytest-runner', 'flake8'],
     tests_require=['pytest'],
     # package_dir={'automatedAQA':'automatedAQA'},
-    package_data={
-        'automatedAQA.MagNET_QA_scripts':['*.ijm'],
-        'automatedAQA':['*.ijm', 'ijm_template_header','ijm_template_footer'],
- 
-    },
+    package_data={'automatedAQA':['*.ijm', 'ijm_template_header','ijm_template_footer'],},
+    data_files = {'automatedAQA.MagNET_QA_scripts':['*.ijm']},
     include_package_data=True,
     entry_points={
         'console_scripts': ['aaqa=automatedAQA.automated_AQA:main']
