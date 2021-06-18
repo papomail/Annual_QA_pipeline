@@ -27,7 +27,7 @@ setup(
 	    'automatedAQA':['*.ijm', 'ijm_template_header','ijm_template_footer'],
     	    'automatedAQA/automatedAQA':['*.ijm', 'ijm_template_header','ijm_template_footer'],
 	    'automatedAQA/automatedAQA/MagNET_QA_scripts':['*.ijm'],
-	    'automatedAQA/icons':['*'],
+	    'automatedAQA/icons':['*.png','*.icns'],
 	    
     		},
 	
