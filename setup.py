@@ -25,10 +25,11 @@ setup(
     package_data={
 	    'automatedAQA':['*.ijm', 'ijm_template_header','ijm_template_footer'],
     	    'automatedAQA/automatedAQA':['*.ijm', 'ijm_template_header','ijm_template_footer'],
+	    
     		},
 	
-    data_files = {'*',
-#	    'automatedAQA/MagNET_QA_scripts':['*.ijm'],
+    data_files = {
+	    'automatedAQA/automatedAQA/MagNET_QA_scripts':['*.ijm'],
     },
     include_package_data=True,
     entry_points={
