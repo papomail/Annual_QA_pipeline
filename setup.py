@@ -28,7 +28,7 @@ setup(
     		},
 	
     data_files = {
-	    'automatedAQA/automatedAQA.MagNET_QA_scripts':['*.ijm'],
+	    'automatedAQA/automatedAQA/MagNET_QA_scripts':['*.ijm'],
     },
     include_package_data=True,
     entry_points={
