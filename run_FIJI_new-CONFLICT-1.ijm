@@ -2,29 +2,30 @@
 close("*");
 roiManager("reset");
 
+current=getDirectory("current");
+script_path = current+"/MagNET_QA_scripts/";
+print(script_path)
 home_path=getDirectory("home");
 
-script_path = "/Users/papo/Sync/Projects/Annual_QA_pipeline/automatedAQA/MagNET_QA_scripts/" 
-print(script_path) ;
-BC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/BC_SNR_TRA_1_401";
-BC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/BC_SNR_TRA_2_301";
-BC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/BC_SNR_COR_2_901";
-BC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/BC_SNR_COR_1_801";
-BC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/BC_SNR_SAG_2_701";
-BC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/BC_SNR_SAG_1_601";
-HNC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/HNC_SNR_TRA_2_3101";
-HNC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/HNC_SNR_TRA_1_3001";
-HNC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/HNC_SNR_COR_1_3401";
-HNC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/HNC_SNR_COR_2_3501";
-HNC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/HNC_SNR_SAG_2_3301";
-HNC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/HNC_SNR_SAG_1_3201";
-GEOMETRY_TRA = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/BC_GEO_TRA_1401";
-GEOMETRY_COR = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/BC_GEO_COR_2001";
-GEOMETRY_SAG = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/BC_GEO_SAG_1701";
-SLICE_POS = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/BC_SP_TRA_1101";
-GHOSTING_1 = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/HNC_GHO_NSA1_3901";
-GHOSTING_2 = "/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/HNC_GHO_NSA2_4001";
-Results_dir="/Users/papo/Sync/MRdata/QA/PBT2021_AnnualQA_complete/DATA/DATA/FIJI_Results";
+BC_SNR_TRA_1 = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/BC_SNR_TRA_8";
+BC_SNR_TRA_2 = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/BC_SNR_TRA_9";
+BC_SNR_COR_1 = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/BC_SNR_COR_10";
+BC_SNR_COR_2 = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/BC_SNR_COR_11";
+BC_SNR_SAG_1 = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/BC_SNR_SAG_12";
+BC_SNR_SAG_2 = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/BC_SNR_SAG_13";
+HNC_SNR_TRA_1 = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/HNC_SNR_TRA_28";
+HNC_SNR_TRA_2 = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/HNC_SNR_TRA_29";
+HNC_SNR_COR_1 = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/HNC_SNR_COR_25";
+HNC_SNR_COR_2 = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/HNC_SNR_COR_24";
+HNC_SNR_SAG_1 = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/HNC_SNR_SAG_27";
+HNC_SNR_SAG_2 = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/HNC_SNR_SAG_26";
+GEOMETRY_TRA = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/BC_GEO_TRA_17";
+GEOMETRY_COR = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/BC_GEO_COR_19";
+GEOMETRY_SAG = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/BC_GEO_SAG_21";
+SLICE_POS = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/BC_SP_TRA_15";
+GHOSTING_1 = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/HNC_GHO_TRA_31";
+GHOSTING_2 = "/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/HNC_GHO_TRA_2AVE_32";
+Results_dir="/Users/patxi/Sync/MRdata/QA/AERA_PG_30Devonshire/AERA_30Devonshire_2021/DATA/DATA/FIJI_Results";
 
 
 //Create Results_dir folder
@@ -113,4 +114,4 @@ print("Done! Test results saved in:");
 print(Results_dir);
 
 print("Closing FIJI now... ");
-// run("Quit");
+run("Quit");

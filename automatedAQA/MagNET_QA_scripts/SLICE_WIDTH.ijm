@@ -119,7 +119,7 @@ setKeyDown("none");
 
 
 hpp=newArray(hprofile.length-1);
-vpp=newArray(hprofile.length-1);
+vpp=newArray(vprofile.length-1);
 for (i = 0; i < hprofile.length-1; i++) {
 	hpp[i]=hprofile[i+1]-hprofile[i];// hprofile derivative
 	if (i<hprofile.length-2) {

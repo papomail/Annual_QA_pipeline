@@ -39,8 +39,9 @@ def sort_dicoms():
             protocol_name = ds[0x18,0x1030].value
 
             ''' Change protocol name to match the nomenclature in FIJI scripts'''
-            protocol_name = protocol_name.upper().replace('_BODY_','_BC_')
-            protocol_name = protocol_name.upper().replace('_HEAD_','_HNC_')
+            protocol_name = protocol_name.upper().replace('BODY_','BC_')
+            protocol_name = protocol_name.upper().replace('HEAD_','HNC_')
+            protocol_name = protocol_name.upper().replace('HC_','HNC_')
             protocol_name = protocol_name.upper().replace('_SLICE_POSITION_','_SP_')
             protocol_name = protocol_name.upper().replace('_GHOSTING_','_GHO_')
             protocol_name = protocol_name.upper().replace('_GEOMETRIC_','_GEO_')
