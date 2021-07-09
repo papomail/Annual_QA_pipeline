@@ -117,43 +117,13 @@ setKeyDown("none");
   //  Plot.addText(myimage+": Vertical ROI",0.3,0.1);
     //Plot.show();
 
+Array.getStatistics(hprofile, hmin, hmax, hmean, hstd);
+Array.getStatistics(vprofile, vmin, vmax, vmean, vstd);
 
-hpp=newArray(hprofile.length-1);
-vpp=newArray(vprofile.length-1);
-for (i = 0; i < hprofile.length-1; i++) {
-	hpp[i]=hprofile[i+1]-hprofile[i];// hprofile derivative
-	if (i<hprofile.length-2) {
-	hpp[i]=hpp[i+1]-hpp[i];// hprofile 2nd derivative
-	}
-	if (i<hprofile.length-3) {
-	hpp[i]=hpp[i+1]-hpp[i];// hprofile 3rd derivative
-	}
-	hpp[i]=abs(hpp[i]);
-	vpp[i]=vprofile[i+1]-vprofile[i];// vprofile derivative
-	if (i<hprofile.length-2) {
-	vpp[i]=vpp[i+1]-vpp[i];// hprofile 2nd derivative
-	}
-	if (i<hprofile.length-3) {
-	vpp[i]=vpp[i+1]-vpp[i];// hprofile 3rd derivative
-	}
-	vpp[i]=abs(vpp[i]);
-}
+hvar = hmax - hmin;
+vvar = vmax - vmin;
 
-hpp=Array.sort(hpp);
-vpp=Array.sort(vpp);
-
-hpp=Array.trim(hpp, 100);
-vpp=Array.trim(vpp, 100);
-
- //Plot.create("3rd derivative abs H, peaks removed","Voxel number along X axis","Voxel intensity",hpp);
- //Plot.show();
- //Plot.create("derivative abs V, peaks removed","Voxel number along X axis","Voxel intensity",vpp);
- //Plot.show();
-
-Array.getStatistics(hpp, hmin, hmax, hmean, hstd);
-Array.getStatistics(vpp, vmin, vmax, vmean, vstd);
-
-if(hmean>vmean){
+if(hvar>vvar){
     //Plot.create("Window profile","Voxel number along X axis","Voxel intensity",hprofile);
     //Plot.addText(myimage+": Horizontal",0.3,0.1);
     //Plot.show();

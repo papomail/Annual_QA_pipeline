@@ -90,7 +90,7 @@ runMacro(script_path + "GEOMETRIC_LINEARITY.ijm");
 
 // RUN SLICE WIDTH:
 
-runMacro(script_path + "SLICE_WIDTH2.ijm");
+runMacro(script_path + "SLICE_WIDTH.ijm");
 
 
 // RUN GHOSTING:
@@ -113,4 +113,4 @@ print("Done! Test results saved in:");
 print(Results_dir);
 
 print("Closing FIJI now... ");
-run("Quit");
+// run("Quit");
