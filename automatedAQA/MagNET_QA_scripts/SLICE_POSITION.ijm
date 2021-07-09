@@ -180,11 +180,11 @@ run("Invert", "stack");
 roiManager("reset");
 
 kk=0;
-slice=newArray(27);
+slice=newArray(nSlices);
 selectWindow("CandE");
 run("Invert", "stack");
 
-for (i = 0; i < 27; i++) {
+for (i = 0; i < nSlices; i++) {
 	//run("Previous Slice [<]");
 	setSlice(i+1);
 	//run("Duplicate...", "use");

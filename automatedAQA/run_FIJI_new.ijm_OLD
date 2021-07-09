@@ -113,4 +113,4 @@ print("Done! Test results saved in:");
 print(Results_dir);
 
 print("Closing FIJI now... ");
-// run("Quit");
+run("Quit");
