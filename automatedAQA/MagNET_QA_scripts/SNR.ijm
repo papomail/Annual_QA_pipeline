@@ -178,7 +178,7 @@ run("Duplicate...", "title=&name");
 run("Find Edges");
 
 
-makeRectangle(0, 0, 256, 256);
+makeRectangle(0, 0, getWidth, getHeight);
 Xprofile = getProfile();
 xpos=Array.rankPositions(Xprofile);
 midx=(lengthOf(xpos)-1)/2;
@@ -191,7 +191,7 @@ if  ( abs(xcent- midx)  <=  midx/4  ){
 
 selectWindow("edge image");
 run("Rotate 90 Degrees Left");
-makeRectangle(0, 0, 256, 256);
+makeRectangle(0, 0, getWidth, getHeight);
 Yprofile = getProfile();
 ypos=Array.rankPositions(Yprofile);
 midy=(lengthOf(xpos)-1)/2;
