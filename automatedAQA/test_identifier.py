@@ -78,6 +78,10 @@ def main(main_folder, filter_dic=filter_dic):
         # print(f'\nFolder(s) found for {key}:')
         # print(f'len{key}={len(folders_dic[key])}')
         # print(folders_dic[key])
+        if len(folders_dic[key]) == 0:  #skip if 
+            print(f'Unable to find a file for the {key} test. Skiping it.' )
+            continue
+
         if len(folders_dic[key]) == 2:
             line = f'{key}_1 = \"{str(folders_dic[key][0])}\";\n' 
             new_paths_text.append(line)
@@ -102,6 +106,7 @@ def main(main_folder, filter_dic=filter_dic):
         header = f.read()
 
     with open(Path(__file__).resolve().parent/'ijm_template_footer','r') as f:
+    # with open(Path(__file__).resolve().parent/'ijm_template_footer_SNR_Only_testing','r') as f:  #Use if to run SNR tests only. patch work.
         footer = f.read()
 
     complete_text = str([header, new_paths_text,footer])

@@ -30,31 +30,33 @@ def sort_dicoms():
 
     print(f'\nDICOM folder = {dicom_folder}')
 
-    for file in dicom_folder.rglob('*'):
-        if file.is_file():
-            try:
-                ds = pydicom.dcmread(str(file))
-            except:
-                continue
-            protocol_name = ds[0x18,0x1030].value
+    for file in dicom_folder.rglob('*'): 
+        if 'PS' not in  file.name: #exclude copying PS files
 
-            ''' Change protocol name to match the nomenclature in FIJI scripts'''
-            protocol_name = protocol_name.upper().replace('BODY_','BC_')
-            protocol_name = protocol_name.upper().replace('HEAD_','HNC_')
-            protocol_name = protocol_name.upper().replace('HC_','HNC_')
-            protocol_name = protocol_name.upper().replace('_SLICE_POSITION_','_SP_')
-            protocol_name = protocol_name.upper().replace('_GHOSTING_','_GHO_')
-            protocol_name = protocol_name.upper().replace('_GEOMETRIC_','_GEO_')
-            protocol_name = protocol_name.upper().replace('_LINEARITY_','_L_')
+            if file.is_file():
+                try:
+                    ds = pydicom.dcmread(str(file))
+                except:
+                    continue
+                protocol_name = ds[0x18,0x1030].value
 
-            series_number = ds.SeriesNumber
-            organised_folder =main_folder/'DATA'
-            protocol_folder = organised_folder/f'{protocol_name}_{series_number}'
+                ''' Change protocol name to match the nomenclature in FIJI scripts'''
+                protocol_name = protocol_name.upper().replace('BODY_','BC_')
+                protocol_name = protocol_name.upper().replace('HEAD_','HNC_')
+                protocol_name = protocol_name.upper().replace('HC_','HNC_')
+                protocol_name = protocol_name.upper().replace('_SLICE_POSITION_','_SP_')
+                protocol_name = protocol_name.upper().replace('_GHOSTING_','_GHO_')
+                protocol_name = protocol_name.upper().replace('_GEOMETRIC_','_GEO_')
+                protocol_name = protocol_name.upper().replace('_LINEARITY_','_L_')
 
-            protocol_folder.mkdir( parents=True, exist_ok=True)
-            shutil.copy(file, f'{protocol_folder/file.name}.dcm') 
+                series_number = ds.SeriesNumber
+                organised_folder =main_folder/'DATA'
+                protocol_folder = organised_folder/f'{protocol_name}_{series_number}'
 
-    print(f'\nDICOM files from {main_folder.name} are organised inside the {main_folder.name}/DATA folder.') # For newer Python.
+                protocol_folder.mkdir( parents=True, exist_ok=True)
+                shutil.copy(file, f'{protocol_folder/file.name}.dcm') 
+
+        print(f'\nDICOM files from {main_folder.name} are organised inside the {main_folder.name}/DATA folder.') # For newer Python.
     return organised_folder
 
 
