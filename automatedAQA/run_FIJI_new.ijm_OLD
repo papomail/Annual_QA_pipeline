@@ -6,19 +6,24 @@ home_path=getDirectory("home");
 
 script_path = "/Users/papo/Sync/Projects/Annual_QA_pipeline/automatedAQA/MagNET_QA_scripts/" 
 print(script_path) ;
-BC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/PBT_SNR_tests/PBT_SNR_TEST_FOLLOWUP2_14Oct2021/DATA/BC_SNR_TRA_2_301";
-BC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/PBT_SNR_tests/PBT_SNR_TEST_FOLLOWUP2_14Oct2021/DATA/BC_SNR_TRA_1_201";
-BC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/PBT_SNR_tests/PBT_SNR_TEST_FOLLOWUP2_14Oct2021/DATA/BC_SNR_COR_2_701";
-BC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/PBT_SNR_tests/PBT_SNR_TEST_FOLLOWUP2_14Oct2021/DATA/BC_SNR_COR_1_601";
-BC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/PBT_SNR_tests/PBT_SNR_TEST_FOLLOWUP2_14Oct2021/DATA/BC_SNR_SAG_1_401";
-BC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/PBT_SNR_tests/PBT_SNR_TEST_FOLLOWUP2_14Oct2021/DATA/BC_SNR_SAG_2_501";
-HNC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/PBT_SNR_tests/PBT_SNR_TEST_FOLLOWUP2_14Oct2021/DATA/HNC_SNR_TRA_1_901";
-HNC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/PBT_SNR_tests/PBT_SNR_TEST_FOLLOWUP2_14Oct2021/DATA/HNC_SNR_TRA_2_1001";
-HNC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/PBT_SNR_tests/PBT_SNR_TEST_FOLLOWUP2_14Oct2021/DATA/HNC_SNR_COR_1_1301";
-HNC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/PBT_SNR_tests/PBT_SNR_TEST_FOLLOWUP2_14Oct2021/DATA/HNC_SNR_COR_2_1401";
-HNC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/PBT_SNR_tests/PBT_SNR_TEST_FOLLOWUP2_14Oct2021/DATA/HNC_SNR_SAG_1_1101";
-HNC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/PBT_SNR_tests/PBT_SNR_TEST_FOLLOWUP2_14Oct2021/DATA/HNC_SNR_SAG_2_1201";
-Results_dir="/Users/papo/Sync/MRdata/QA/PBT_SNR_tests/PBT_SNR_TEST_FOLLOWUP2_14Oct2021/DATA/FIJI_Results";
+BC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_SNR_TRA_13";
+BC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_SNR_TRA_12";
+BC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_SNR_COR_14";
+BC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_SNR_COR_15";
+BC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_SNR_SAG_16";
+BC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_SNR_SAG_17";
+HNC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/HNC_SNR_TRA_2";
+HNC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/HNC_SNR_TRA_3";
+HNC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/HNC_SNR_COR_5";
+HNC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/HNC_SNR_COR_6";
+HNC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/HNC_SNR_SAG_8";
+HNC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/HNC_SNR_SAG_7";
+GEOMETRY_TRA = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_GEO_TRA_21";
+GEOMETRY_COR = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_GEO_COR_25";
+GEOMETRY_SAG = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_GEO_SAG_27";
+SLICE_POS = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_SP_TRA_19";
+GHOSTING = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/GHO_10";
+Results_dir="/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/FIJI_Results";
 
 
 //Create Results_dir folder
@@ -50,16 +55,60 @@ call("ij.Prefs.set", "myMacros.BC_SNR_COR_2", BC_SNR_COR_2);
 call("ij.Prefs.set", "myMacros.BC_SNR_SAG_2", BC_SNR_SAG_2);
 
 
+//Geometry
+call("ij.Prefs.set", "myMacros.GEOMETRY_TRA", GEOMETRY_TRA);
+call("ij.Prefs.set", "myMacros.GEOMETRY_COR", GEOMETRY_COR);
+call("ij.Prefs.set", "myMacros.GEOMETRY_SAG", GEOMETRY_SAG);
+
+//Ghosting
+call("ij.Prefs.set", "myMacros.GHOSTING_1", GHOSTING_1);
+call("ij.Prefs.set", "myMacros.GHOSTING_2", GHOSTING_2);
+
+//Slice Position
+call("ij.Prefs.set", "myMacros.SLICE_POS", SLICE_POS);
+
+//this will retrieve stored valeu of myMacros.savedir to myvalue
+//myvalue = call("ij.Prefs.get", "myMacros.savedir", "defaultValue");
+
+
 wait(200); //to allow FIJI to load fully
 
 // RUN SNR:
 
 runMacro(script_path + "SNR.ijm") ;
 
+// RUN SIGNAL UNIFORMITY:
+
+//runMacro(script_path + "SIGNAL_UNIFORMITY.ijm") ;
+runMacro(script_path + "SIGNAL_UNIFORMITY_NOPLOTS.ijm") ;
+
+// RUN GEOMETRIC_LINEARITY:
+
+runMacro(script_path + "GEOMETRIC_LINEARITY.ijm");
+
+
+// RUN SLICE WIDTH:
+
+runMacro(script_path + "SLICE_WIDTH.ijm");
+
+
+// RUN GHOSTING:
+
+runMacro(script_path + "GHOSTING2.ijm");
+
+
+// RUN SLICE_POS:
+
+runMacro(script_path + "SLICE_POSITION.ijm");
+
+
+
+// close("*");
+
 print("");
 print("");
 print("");
-print("Done! The SNR test results are saved in:");
+print("Done! Test results saved in:");
 print(Results_dir);
 
 print("Closing FIJI now... ");
