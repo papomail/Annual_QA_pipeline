@@ -1,3 +1,4 @@
+from email import message
 from logging import exception
 from pathlib import Path
 from pprint import pprint
@@ -35,12 +36,12 @@ filter_dic = {
 def check_results_exist(main_folder):
     results_dir = Path(main_folder)/"FIJI_Results"
     if results_dir.is_dir():
-        ans = easygui_qt.get_yes_or_no(msg=f'The "{results_dir.name}" folder already exists. Do you want to continue and overwrite it?',default_choice='No', cancel_choice='No')
+        ans = easygui_qt.get_yes_or_no(message=f'The "{results_dir.name}" folder already exists. Do you want to continue and overwrite it?',title='Overwrite folder?')
         if ans:
             print(f'Okay. Clearing {results_dir.name}')
             shutil.rmtree(results_dir)
         else:
-            easygui_qt.show_message(msg = 'Okay. Clearing {results_dir.name}')
+            easygui_qt.show_message(message = 'Okay. Clearing {results_dir.name}')
             print('Okay. Aborting mission. Bye!')
             quit()
     return results_dir       
