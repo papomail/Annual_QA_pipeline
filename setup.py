@@ -21,13 +21,13 @@ setup(
     ],
     setup_requires=['setuptools_scm', 'pytest-runner', 'flake8'],
     tests_require=['pytest'],
-    # package_dir={'automatedAQA':'automatedAQA'},
+    package_dir={'automatedAQA':'automatedAQA',
+		},
 	
     package_data={
-	    'automatedAQA':['*.ijm', 'ijm_template_header','ijm_template_footer'],
-    	    'automatedAQA/automatedAQA':['*.ijm', 'ijm_template_header','ijm_template_footer'],
-	    'automatedAQA/automatedAQA/MagNET_QA_scripts':['*.ijm'],
-	    'automatedAQA/icons':['*.png','*.icns'],
+    	    'automatedAQA':['*.ijm', 'ijm_template_header','ijm_template_footer'],
+	    'automatedAQA.MagNET_QA_scripts':['*.ijm'],
+	    'automatedAQA.icons':['*.png','*.icns'],
 	    
     		},
 	
