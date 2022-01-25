@@ -41,7 +41,7 @@ def check_results_exist(main_folder):
             print(f'Okay. Clearing {results_dir.name}')
             shutil.rmtree(results_dir)
         else:
-            easygui_qt.show_message(message = 'Okay. Clearing {results_dir.name}')
+            easygui_qt.show_message(message = 'Okay. Clearing {results_dir.name}',title='Aborting mission')
             print('Okay. Aborting mission. Bye!')
             quit()
     return results_dir       

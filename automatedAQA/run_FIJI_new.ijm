@@ -6,25 +6,25 @@ home_path=getDirectory("home");
 
 script_path = "/Users/papo/Sync/Projects/Annual_QA_pipeline/automatedAQA/MagNET_QA_scripts/" 
 print(script_path) ;
-BC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_SNR_TRA_13";
-BC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_SNR_TRA_12";
-BC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_SNR_COR_14";
-BC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_SNR_COR_15";
-BC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_SNR_SAG_16";
-BC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_SNR_SAG_17";
-HNC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/HNC_SNR_TRA_2";
-HNC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/HNC_SNR_TRA_3";
-HNC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/HNC_SNR_COR_5";
-HNC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/HNC_SNR_COR_6";
-HNC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/HNC_SNR_SAG_8";
-HNC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/HNC_SNR_SAG_7";
-GEOMETRY_TRA = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_GEO_TRA_21";
-GEOMETRY_COR = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_GEO_COR_25";
-GEOMETRY_SAG = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_GEO_SAG_27";
-SLICE_POS = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/BC_SP_TRA_19";
-GHOSTING_1 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/GHO_1";
-GHOSTING_2 = "/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/GHO_2";
-Results_dir="/Users/papo/Sync/MRdata/QA/ISEH_2021/DATA_ORGANISED/FIJI_Results";
+BC_SNR_TRA_1 = "/Users/papo/Downloads/DATA_ORGANISED/BC_SNR_TRA_4";
+BC_SNR_TRA_2 = "/Users/papo/Downloads/DATA_ORGANISED/BC_SNR_TRA_3";
+BC_SNR_COR_1 = "/Users/papo/Downloads/DATA_ORGANISED/BC_SNR_COR_6";
+BC_SNR_COR_2 = "/Users/papo/Downloads/DATA_ORGANISED/BC_SNR_COR_5";
+BC_SNR_SAG_1 = "/Users/papo/Downloads/DATA_ORGANISED/BC_SNR_SAG_8";
+BC_SNR_SAG_2 = "/Users/papo/Downloads/DATA_ORGANISED/BC_SNR_SAG_7";
+HNC_SNR_TRA_1 = "/Users/papo/Downloads/DATA_ORGANISED/HNC_SNR_TRA_19";
+HNC_SNR_TRA_2 = "/Users/papo/Downloads/DATA_ORGANISED/HNC_SNR_TRA_18";
+HNC_SNR_COR_1 = "/Users/papo/Downloads/DATA_ORGANISED/HNC_SNR_COR_21";
+HNC_SNR_COR_2 = "/Users/papo/Downloads/DATA_ORGANISED/HNC_SNR_COR_20";
+HNC_SNR_SAG_1 = "/Users/papo/Downloads/DATA_ORGANISED/HNC_SNR_SAG_23";
+HNC_SNR_SAG_2 = "/Users/papo/Downloads/DATA_ORGANISED/HNC_SNR_SAG_22";
+GEOMETRY_TRA = "/Users/papo/Downloads/DATA_ORGANISED/BC_GEO_TRA_12";
+GEOMETRY_COR = "/Users/papo/Downloads/DATA_ORGANISED/BC_GEO_COR_14";
+GEOMETRY_SAG = "/Users/papo/Downloads/DATA_ORGANISED/BC_GEO_SAG_16";
+SLICE_POS = "/Users/papo/Downloads/DATA_ORGANISED/BC_SP_TRA_10";
+GHOSTING_1 = "/Users/papo/Downloads/DATA_ORGANISED/HNC_GHO_TRA_2AVE_26";
+GHOSTING_2 = "/Users/papo/Downloads/DATA_ORGANISED/HNC_GHO_TRA_1AVE_25";
+Results_dir="/Users/papo/Downloads/DATA_ORGANISED/FIJI_Results";
 
 
 //Create Results_dir folder
