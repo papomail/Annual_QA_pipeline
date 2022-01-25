@@ -6,7 +6,7 @@ setup(
     description='Automated Annual QA is a set of scripts aimed to eliminate the repetitive manual labour and to improve the reproducibility of the Quality Control data analysis for MRI scanners',
     author='Patxi Torrealdea ',
     author_email='francisco.torrealdea@nhs.net',
-    url='https://github.com/papomail/Annual_QA_pipeline',
+    url='https://github.com/papomail/automatedAQA',
     packages=find_packages(),
     use_scm_version=True,
     install_requires=[
