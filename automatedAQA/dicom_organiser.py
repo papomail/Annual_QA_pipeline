@@ -8,7 +8,7 @@ import shutil
 def sort_dicoms():
     my_msg ='Please select the folder containing the QA data'
     # main_folder = Path(easygui.diropenbox(msg=my_msg, title=my_msg, default=Path.home()/'Sync/MRdata/QA' ))
-    main_folder = Path(easygui_qt.get_directory_name(title=my_msg, choices=None))
+    main_folder = Path(easygui_qt.get_directory_name(title=my_msg, choices=None)
     in_folders = [fol for fol in main_folder.rglob('*') if fol.is_dir()]
     dicom_folder = []
 
