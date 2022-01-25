@@ -8,7 +8,7 @@ import shutil
 def sort_dicoms():
     my_msg ='Please select the folder containing the QA data'
     # main_folder = Path(easygui.diropenbox(msg=my_msg, title=my_msg, default=Path.home()/'Sync/MRdata/QA' ))
-    main_folder = Path(easygui_qt.get_directory_name(title=my_msg))
+    main_folder = Path(easygui_qt.get_directory_name(title=my_msg, choices=None))
     in_folders = [fol for fol in main_folder.rglob('*') if fol.is_dir()]
     dicom_folder = []
 
@@ -25,10 +25,10 @@ def sort_dicoms():
         if len(dicom_folder) == 1:
             dicom_folder = dicom_folder[0]
         elif len(dicom_folder) > 1:
-            easygui_qt.handle_exception(f'{len(dicom_folder)} DICOM folders found. Please choose one dataset at a time.')
+            easygui_qt.handle_exception(title=f'{len(dicom_folder)} DICOM folders found. Please choose one dataset at a time.')
         elif len(dicom_folder) == 0:
             # if easygui.ccbox(f'No DICOM folders found.\nShall I continue to check for dcm files inside {main_folder.name}?'):
-            if easygui_qt.get_continue_or_cancel(f'No DICOM folders found.\nShall I continue to check for dcm files inside {main_folder.name}?'):
+            if easygui_qt.get_continue_or_cancel(message=f'No DICOM folders found.\nShall I continue to check for dcm files inside {main_folder.name}?', title='DICOM folder not found', continue_button_text=f'check in {main_folder.name}', cancel_button_text='Cancel'):
                 dicom_folder = main_folder
             else:
                 quit()  
