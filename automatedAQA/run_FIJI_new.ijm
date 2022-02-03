@@ -1,3 +1,30 @@
+// RUNS MAGNetQA TESTS
+close("*");
+roiManager("reset");
+
+home_path=getDirectory("home");
+
+script_path = "/Users/papo/Sync/Projects/Annual_QA_pipeline/automatedAQA/MagNET_QA_scripts/" 
+print(script_path) ;
+BC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/BC_SNR_TRA_17";
+BC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/BC_SNR_TRA_16";
+BC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/BC_SNR_COR_19";
+BC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/BC_SNR_COR_18";
+BC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/BC_SNR_SAG_20";
+BC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/BC_SNR_SAG_21";
+HNC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/HNC_SNR_TRA_6";
+HNC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/HNC_SNR_TRA_7";
+HNC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/HNC_SNR_COR_8";
+HNC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/HNC_SNR_COR_9";
+HNC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/HNC_SNR_SAG_11";
+HNC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/HNC_SNR_SAG_10";
+GEOMETRY_TRA = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/BC_GEO_TRA_24";
+GEOMETRY_COR = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/BC_GEO_COR_33";
+GEOMETRY_SAG = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/BC_GEO_SAG_30";
+SLICE_POS = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/BC_SP_TRA_35";
+GHOSTING_1 = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/HNC_GHO_TRA_AV1_13";
+GHOSTING_2 = "/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/HNC_GHO_TRA_AV2_14";
+Results_dir="/Users/papo/Sync/MRdata/QA/81Harleyst_Qa2022/DATA_ORGANISED/FIJI_Results";
 
 
 //Create Results_dir folder

@@ -88,9 +88,16 @@ File.makeDirectory(screenshot_dir);
 open(filename2);
 myimage2=getTitle();
 
+
 open(filename);
 myimage=getTitle();
 selectWindow(myimage);
+
+run("Duplicate...", "duplicate");
+rename("dup");
+run("Despeckle");
+run("Despeckle");
+run("Despeckle");
 
 centre_pos=find_phantom_centre();
 print("Phantom centre at x,y =");
