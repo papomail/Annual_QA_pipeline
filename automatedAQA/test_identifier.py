@@ -30,7 +30,14 @@ filter_dic = {
 
     #Ghosting
     'GHOSTING':['gho_'], 
+
+    #Spine Coils (+ BodyMatrix)
+    # 'SP12_SNR':['sp12','snr'],
+    # 'SP34_SNR':['sp34','snr'],
+    # 'SP56_SNR':['sp56','snr'],
+    # 'SP78_SNR':['sp78','snr'],
 }
+
 
 
 def check_results_exist(main_folder):
@@ -107,7 +114,8 @@ def main(main_folder, filter_dic=filter_dic):
         header = f.read()
 
     with open(Path(__file__).resolve().parent/'ijm_template_footer','r') as f:
-    # with open(Path(__file__).resolve().parent/'ijm_template_footer_SNR_Only_testing','r') as f:  #Use if to run SNR tests only. patch work.
+    # with open(Path(__file__).resolve().parent/'ijm_template_footer_GHO_ONLY','r') as f:  #Use if to run GHOSTING tests only. patch work.
+    # with open(Path(__file__).resolve().parent/'ijm_template_footer_SNR_ONLY','r') as f:  #Use if to run SNR tests only. patch work.
         footer = f.read()
 
     complete_text = str([header, new_paths_text,footer])

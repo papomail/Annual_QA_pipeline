@@ -6,18 +6,14 @@ home_path=getDirectory("home");
 
 script_path = "/Users/papo/Sync/Projects/Annual_QA_pipeline/automatedAQA/MagNET_QA_scripts/" 
 print(script_path) ;
-HNC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT18_SP12_SNR_TRA_44";
-HNC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT18_SP12_SNR_TRA_43";
-HNC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT18B_SP34_SNR_TRA_45";
-HNC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT18B_SP34_SNR_TRA_46";
-HNC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT18LONG_SP56_SNR_TRA_48";
-HNC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT18LONG_SP56_SNR_TRA_47";
-BC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT30_SP78_SNR_TRA_49";
-BC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT30_SP78_SNR_TRA_50";
-BC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT30_SP78_SNR_TRA_49";
-BC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT30_SP78_SNR_TRA_50";
-BC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT30_SP78_SNR_TRA_49";
-BC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT30_SP78_SNR_TRA_50";
+BC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT18_SP12_SNR_TRA_44";
+BC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT18_SP12_SNR_TRA_43";
+BC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT18B_SP34_SNR_TRA_45";
+BC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT18B_SP34_SNR_TRA_46";
+BC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT18LONG_SP56_SNR_TRA_48";
+BC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT18LONG_SP56_SNR_TRA_47";
+HNC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT30_SP78_SNR_TRA_49";
+HNC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/BMAT30_SP78_SNR_TRA_50";
 Results_dir="/Users/papo/Sync/MRdata/QA/System14_N_Well/2022/DATA_ORGANISED/FIJI_Results";
 
 
@@ -32,22 +28,22 @@ File.makeDirectory(Results_dir);
 call("ij.Prefs.set", "myMacros.savedir", Results_dir);
 //store filename paths
 //SNR HNC coil
-call("ij.Prefs.set", "myMacros.HNC_SNR_TRA_1", HNC_SNR_TRA_1);
-call("ij.Prefs.set", "myMacros.HNC_SNR_COR_1", HNC_SNR_COR_1);
-call("ij.Prefs.set", "myMacros.HNC_SNR_SAG_1", HNC_SNR_SAG_1);
+//call("ij.Prefs.set", "myMacros.HNC_SNR_TRA_1", HNC_SNR_TRA_1);
+//call("ij.Prefs.set", "myMacros.HNC_SNR_COR_1", HNC_SNR_COR_1);
+//call("ij.Prefs.set", "myMacros.HNC_SNR_SAG_1", HNC_SNR_SAG_1);
 
-call("ij.Prefs.set", "myMacros.HNC_SNR_TRA_2", HNC_SNR_TRA_2);
-call("ij.Prefs.set", "myMacros.HNC_SNR_COR_2", HNC_SNR_COR_2);
-call("ij.Prefs.set", "myMacros.HNC_SNR_SAG_2", HNC_SNR_SAG_2);
+//call("ij.Prefs.set", "myMacros.HNC_SNR_TRA_2", HNC_SNR_TRA_2);
+//call("ij.Prefs.set", "myMacros.HNC_SNR_COR_2", HNC_SNR_COR_2);
+//call("ij.Prefs.set", "myMacros.HNC_SNR_SAG_2", HNC_SNR_SAG_2);
 
 //SNR BC coil
 call("ij.Prefs.set", "myMacros.BC_SNR_TRA_1", BC_SNR_TRA_1);
 call("ij.Prefs.set", "myMacros.BC_SNR_COR_1", BC_SNR_COR_1);
-call("ij.Prefs.set", "myMacros.BC_SNR_SAG_1", BC_SNR_SAG_1);
+//call("ij.Prefs.set", "myMacros.BC_SNR_SAG_1", BC_SNR_SAG_1);
 
 call("ij.Prefs.set", "myMacros.BC_SNR_TRA_2", BC_SNR_TRA_2);
 call("ij.Prefs.set", "myMacros.BC_SNR_COR_2", BC_SNR_COR_2);
-call("ij.Prefs.set", "myMacros.BC_SNR_SAG_2", BC_SNR_SAG_2);
+//call("ij.Prefs.set", "myMacros.BC_SNR_SAG_2", BC_SNR_SAG_2);
 
 
 wait(200); //to allow FIJI to load fully

@@ -132,9 +132,9 @@ for (i=1; i<num_slices ; i++) {
 	setSlice(i);
 	wait(20);
 	
-	makeLine(edge_xpos[0], edge_ypos[0], edge_xpos[2], edge_ypos[2]);
+	makeLine(edge_xpos[0], edge_ypos[0], edge_xpos[1], edge_ypos[1]);
 	roiManager("add");
-	makeLine(edge_xpos[1], edge_ypos[1], edge_xpos[3], edge_ypos[3]);
+	makeLine(edge_xpos[2], edge_ypos[2], edge_xpos[3], edge_ypos[3]);
 	roiManager("add");	
     makeLine(centre_xpos[0], centre_ypos[0], centre_xpos[1], centre_ypos[1]);
 	roiManager("add");	

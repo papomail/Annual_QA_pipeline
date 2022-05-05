@@ -74,13 +74,13 @@ if (bottle_pos2[0] > image_width/2){
 	
 // Find centre from the NSA=1 image AFTER POSSIBLE ROTATION
 selectWindow(myimage);  
-bottle_pos=find_bottle_new();
+bottle_pos=find_bottle();
 print("Phantom centre in the first image is at x,y ="); 
 Array.print(bottle_pos); //show central point (x,y) of the phantom
 
 // Find centre from the NSA=2 image AFTER POSSIBLE ROTATION
 selectWindow(myimage2);  
-bottle_pos2=find_bottle_new();
+bottle_pos2=find_bottle();
 print("Phantom centre in the second image is at x,y ="); 
 Array.print(bottle_pos2); //show central point (x,y) of the phantom
 
@@ -134,7 +134,7 @@ setLocation(1,1,1028,1028);
 wait(100);
 myscreenshot=screenshot_dir+File.separator+myimage+"_"+TestName+".png";
 exec("screencapture", myscreenshot);
-setLocation(1,1,300,300);
+// setLocation(1,1,300,300);
 }
 
 
@@ -218,11 +218,11 @@ roiManager("rename", roiname);
 
 
 
-// create all posible ghosting rois
+// create all possible ghosting rois
 for (i = 0; i < lengthOf(rc); i++) {
 	makeRectangle(xx-10,yy-rc[i]/abs(rc[i])*hh/2-10-20*rc[i], 20, 20);
 roiManager("add");
-roiname="G"+i+lengthOf(rc);
+roiname="G"+i+lengthOf(rc)+1;
 roiManager("select", i+2+lengthOf(rc));
 roiManager("rename", roiname);
 }
@@ -374,7 +374,7 @@ print("Bottle centre y="+meany + " and its height is "+maxh);
 
 
 myx=round(maxx);
-myy=round(maxy);
+myy=round(maxy) + 1; //pushes the Y pos slightly down to compensate for the non-spherical centre;
 myw=round(maxw);
 myh=round(maxh);
 position=newArray(myx,myy,myw,myh);
@@ -399,8 +399,10 @@ run("Find Edges");
 setAutoThreshold("Intermodes");
 run("Convert to Mask");
 run("Analyze Particles...", "  show=[Overlay Masks] display exclude clear summarize record add");
-xpos=getResult("X");
-ypos=getResult("Y") + 3; //pushes the Y pos slightly down to compansate for the non-spherical centre
+//xpos=getResult("X");
+//ypos=getResult("Y");
+xpos=getResult("X") - 0; //pull the X pos to compensate for the non-spherical centre
+ypos=getResult("Y") + 0; //pushes the Y pos slightly down to compensate for the non-spherical centre
 
 position=newArray(xpos,ypos,38,38);
 close();
