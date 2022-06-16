@@ -91,9 +91,9 @@ def main(main_folder, filter_dic=filter_dic):
             continue
 
         if len(folders_dic[key]) == 2:
-            line = f'{key}_1 = \"{str(folders_dic[key][0])}\";\n' 
+            line = f'{key}_1 = \"{str(folders_dic[key][1])}\";\n' 
             new_paths_text.append(line)
-            line = f'{key}_2 = \"{str(folders_dic[key][1])}\";\n'
+            line = f'{key}_2 = \"{str(folders_dic[key][0])}\";\n'
             new_paths_text.append(line)
         else:
 
