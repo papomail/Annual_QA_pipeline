@@ -113,7 +113,8 @@ def main(main_folder, filter_dic=filter_dic):
     with open(Path(__file__).resolve().parent/'ijm_template_header','r') as f:
         header = f.read()
 
-    with open(Path(__file__).resolve().parent/'ijm_template_footer','r') as f:
+    # with open(Path(__file__).resolve().parent/'ijm_template_footer','r') as f:
+    with open(Path(__file__).resolve().parent/'ijm_template_footer_NO_GHO','r') as f:  #Use if to NO GHOSTING test is available. patch work.
     # with open(Path(__file__).resolve().parent/'ijm_template_footer_GHO_ONLY','r') as f:  #Use if to run GHOSTING tests only. patch work.
     # with open(Path(__file__).resolve().parent/'ijm_template_footer_SNR_ONLY','r') as f:  #Use if to run SNR tests only. patch work.
         footer = f.read()

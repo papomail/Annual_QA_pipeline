@@ -35,13 +35,13 @@ call("ij.Prefs.set", "myMacros.GEOMETRY_COR", GEOMETRY_COR);
 call("ij.Prefs.set", "myMacros.GEOMETRY_SAG", GEOMETRY_SAG);
 
 //Ghosting
-call("ij.Prefs.set", "myMacros.GHOSTING_1", GHOSTING_1);
-call("ij.Prefs.set", "myMacros.GHOSTING_2", GHOSTING_2);
+// call("ij.Prefs.set", "myMacros.GHOSTING_1", GHOSTING_1);
+// call("ij.Prefs.set", "myMacros.GHOSTING_2", GHOSTING_2);
 
 //Slice Position
 call("ij.Prefs.set", "myMacros.SLICE_POS", SLICE_POS);
 
-//this will retrieve stored valeu of myMacros.savedir to myvalue
+//this will retrieve stored value of myMacros.savedir to myvalue
 //myvalue = call("ij.Prefs.get", "myMacros.savedir", "defaultValue");
 
 
@@ -68,7 +68,7 @@ runMacro(script_path + "SLICE_WIDTH.ijm");
 
 // RUN GHOSTING:
 
-runMacro(script_path + "GHOSTING3.ijm");
+//runMacro(script_path + "GHOSTING3.ijm");
 
 
 // RUN SLICE_POS:

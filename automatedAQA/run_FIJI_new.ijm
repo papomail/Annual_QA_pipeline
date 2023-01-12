@@ -6,25 +6,23 @@ home_path=getDirectory("home");
 
 script_path = "/Users/papo/Sync/Projects/Annual_QA_pipeline/automatedAQA/MagNET_QA_scripts/" 
 print(script_path) ;
-BC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/BC_SNR_TRA_1_201";
-BC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/BC_SNR_TRA_2_301";
-BC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/BC_SNR_COR_1_601";
-BC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/BC_SNR_COR_2_701";
-BC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/BC_SNR_SAG_2_501";
-BC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/BC_SNR_SAG_1_401";
-HNC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/HNC_SNR_TRA_2_2301";
-HNC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/HNC_SNR_TRA_1_2201";
-HNC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/HNC_SNR_COR_1_2601";
-HNC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/HNC_SNR_COR_2_2701";
-HNC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/HNC_SNR_SAG_2_2501";
-HNC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/HNC_SNR_SAG_1_2401";
-GEOMETRY_TRA = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/BC_GEO_TRA_1001";
-GEOMETRY_COR = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/BC_GEO_COR_1501";
-GEOMETRY_SAG = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/BC_GEO_SAG_1301";
-SLICE_POS = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/BC_SP_TRA_1901";
-GHOSTING_1 = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/HNC_GHO_TRA_1AV_2901";
-GHOSTING_2 = "/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/HNC_GHO_TRA_2AV_3001";
-Results_dir="/Users/papo/Sync/MRdata/QA/PBT_radiothereapy/QA_2022/Qa_Pbt_2022/DATA_ORGANISED/FIJI_Results";
+BC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/BC_SNR_TRA_3";
+BC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/BC_SNR_TRA_4";
+BC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/BC_SNR_COR_7";
+BC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/BC_SNR_COR_8";
+BC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/BC_SNR_SAG_5";
+BC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/BC_SNR_SAG_6";
+HNC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/HNC_SNR_TRA_21";
+HNC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/HNC_SNR_TRA_22";
+HNC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/HNC_SNR_COR_26";
+HNC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/HNC_SNR_COR_25";
+HNC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/HNC_SNR_SAG_23";
+HNC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/HNC_SNR_SAG_24";
+GEOMETRY_TRA = "/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/BC_GEO_TRA_12";
+GEOMETRY_COR = "/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/BC_GEO_COR_18";
+GEOMETRY_SAG = "/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/BC_GEO_SAG_15";
+SLICE_POS = "/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/BC_SP_TRA_10";
+Results_dir="/Users/papo/Sync/MRdata/QA/MR3_AQA2022/DATA_ORGANISED/FIJI_Results";
 
 
 //Create Results_dir folder
@@ -62,13 +60,13 @@ call("ij.Prefs.set", "myMacros.GEOMETRY_COR", GEOMETRY_COR);
 call("ij.Prefs.set", "myMacros.GEOMETRY_SAG", GEOMETRY_SAG);
 
 //Ghosting
-call("ij.Prefs.set", "myMacros.GHOSTING_1", GHOSTING_1);
-call("ij.Prefs.set", "myMacros.GHOSTING_2", GHOSTING_2);
+// call("ij.Prefs.set", "myMacros.GHOSTING_1", GHOSTING_1);
+// call("ij.Prefs.set", "myMacros.GHOSTING_2", GHOSTING_2);
 
 //Slice Position
 call("ij.Prefs.set", "myMacros.SLICE_POS", SLICE_POS);
 
-//this will retrieve stored valeu of myMacros.savedir to myvalue
+//this will retrieve stored value of myMacros.savedir to myvalue
 //myvalue = call("ij.Prefs.get", "myMacros.savedir", "defaultValue");
 
 
@@ -95,7 +93,7 @@ runMacro(script_path + "SLICE_WIDTH.ijm");
 
 // RUN GHOSTING:
 
-runMacro(script_path + "GHOSTING2.ijm");
+//runMacro(script_path + "GHOSTING3.ijm");
 
 
 // RUN SLICE_POS:

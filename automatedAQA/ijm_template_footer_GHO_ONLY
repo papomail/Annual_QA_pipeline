@@ -31,9 +31,9 @@ call("ij.Prefs.set", "myMacros.BC_SNR_SAG_2", BC_SNR_SAG_2);
 
 wait(200); //to allow FIJI to load fully
 
-// RUN GHOSTING2:
+// RUN GHOSTING3:
 
-runMacro(script_path + "GHOSTING2.ijm");
+runMacro(script_path + "GHOSTING3.ijm");
 
 print("");
 print("");

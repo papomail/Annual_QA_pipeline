@@ -48,9 +48,18 @@ print("Creating folder "+ screenshot_dir);
 File.makeDirectory(screenshot_dir);
 }
 
+
+//Close images
+close("*");
+print("G1");
+
 open(filename);
+wait(100);
 myimage=getTitle();
-selectWindow(myimage);
+rename(myimage);
+
+//selectWindow(myimage);
+print("G2");
 
 FindRods(myimage,results_dir);
 run("Clear Results");
@@ -59,11 +68,16 @@ for (i = 0; i < 6; i++) {
 	//waitForUser( "Pause","Put line through the centre of the rods. \n Press OK when finished");
 	roiManager("Update");
 	run("Set Measurements...", "shape stack display redirect=None decimal=3");
+	wait(100);
+
 	roiManager("measure");
+	wait(100);
 	};
+print("G3");
 	
 saveAs("Results", outdir+File.separator+myimage+"_GEOMETRIC_LIN.csv");
 
+print("G4");
 
 // Close all result images"
 close("*Result*");
@@ -78,17 +92,26 @@ rename("dup1");
 run("8-bit");
 setAutoThreshold("Minimum dark no-reset");
 run("Convert to Mask", "method=Minimum background=Dark calculate");
-
+wait(100);
 run("Duplicate...", "title=dup2");
+rename("dup2");
+print("G5");
+
 run("Fill Holes", "slice");
+wait(100);
 
 	run("Calculator Plus", "i1=dup2 i2=dup1 operation=[Subtract: i2 = (i1-i2) x k1 + k2] k1=1 k2=0 create");
 	close("dup*");
 	selectWindow("Result");
-  
+wait(100);
+
 //particles	
 run("Set Measurements...", "area mean centroid shape stack display redirect=None decimal=3");
+wait(100);
+
 run("Analyze Particles...", "size=9-200 exclude clear");
+wait(100);
+print("G6");
 
 	
 xpos=newArray(9);
@@ -96,12 +119,15 @@ ypos=newArray(9);
 posind=newArray(9);
 for (i = 0; i < 9; i++) {
 	xp=getResult("X", i);
+	wait(100);
+
 	yp=getResult("Y", i);
 	xpos[i]=xp;
 	ypos[i]=yp;
 
 	posind[i]=yp*10+xp;
 }
+print("G7");
 
 sort_index=Array.rankPositions(posind);
 
@@ -120,10 +146,13 @@ for (i = 0; i < 9; i++) {
 xpos=xpos2;
 ypos=ypos2;
 xpos_ypos_concat=Array.concat(xpos,ypos);
+print("G8");
 
 selectWindow(name); 
 // Horizontal lines
 roiManager("reset")
+
+
 
 makeLine(xpos[0], ypos[0], xpos[2], ypos[2]);
 roiManager("add");
@@ -131,6 +160,7 @@ makeLine(xpos[3], ypos[3], xpos[5], ypos[5]);
 roiManager("add");
 makeLine(xpos[6], ypos[6], xpos[8], ypos[8]);
 roiManager("add");
+print("G9");
 
 // Vertical lines
 makeLine(xpos[0], ypos[0], xpos[6], ypos[6]);
@@ -139,6 +169,7 @@ makeLine(xpos[1], ypos[1], xpos[7], ypos[7]);
 roiManager("add");
 makeLine(xpos[2], ypos[2], xpos[8], ypos[8]);
 roiManager("add");
+print("G10");
 
 roiManager("Show All");
 
@@ -147,6 +178,7 @@ wait(100);
 myscreenshot=screenshot_dir+File.separator+myimage+".png";
 exec("screencapture", myscreenshot);
 setLocation(1,1,300,300);
+print("G11");
 
 return xpos_ypos_concat;
 

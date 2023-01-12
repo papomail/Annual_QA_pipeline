@@ -46,9 +46,7 @@ SNR_TEST(BC_SNR_COR_1,BC_SNR_COR_2,Results_dir);
 SNR_TEST(BC_SNR_SAG_1,BC_SNR_SAG_2,Results_dir);
 
 
-//Close images
-close("*");
-
+print("1");
 
 
 
@@ -66,7 +64,7 @@ function SNR_TEST(filename,filename2,results_dir) {
  //         selectImage(nImages);
   //        close();
   //    } ;
-  close("*");
+close("*");
 
 
 outdir=results_dir+File.separator+"SNR";
@@ -86,14 +84,26 @@ File.makeDirectory(screenshot_dir);
 }
 
 open(filename2);
+wait(100);
 myimage2=getTitle();
+rename(myimage2);
+
+print("2");
 
 
 open(filename);
+wait(100);
 myimage=getTitle();
+rename(myimage);
+
+
+print("3");
+
 selectWindow(myimage);
 
-run("Duplicate...", "duplicate");
+print("4");
+
+run("Duplicate...", "dup");
 rename("dup");
 run("Despeckle");
 run("Despeckle");
@@ -107,6 +117,7 @@ selectWindow(myimage);
 run("ROI Manager...");
 roiManager("reset");
 
+print("5");
 
 //Create ROIs
 makeRectangle(centre_pos[0]-10-45,  centre_pos[1]-10-45 ,20,   20);
@@ -120,6 +131,7 @@ roiManager("Add");
 makeRectangle(centre_pos[0]-10+45,  centre_pos[1]-10+45 ,20,   20);
 roiManager("Add");
 
+print("6");
 
 
 //////  Uncomment the next 7 lines to manually move ROIs
@@ -133,39 +145,64 @@ roiManager("Add");
 
 //Mean Signal Measurement from image1:
 run("Set Measurements...", "  mean redirect=None decimal=3");
+wait(100);
+
 //run("Set Measurements...", "  mean standard ");
 roiManager("Measure");
+print("7");
 
 
 selectWindow(myimage);
 run("Duplicate...", "dup1");
+wait(100);
 rename("dup1");
+
+print("8");
 
 selectWindow(myimage2);
 run("Duplicate...", "dup2");
+wait(100);
 rename("dup2");
+
+print("9");
+
 //Subtraction image and Noise Measurements
 run("Calculator Plus", "i1=dup1 i2=dup2 operation=[Subtract: i2 = (i1-i2) x k1 + k2] k1=1 k2=200 create");
+wait(100);
+
+print("10");
 
 run("Set Measurements...", " mean standard redirect=None decimal=3");
 roiManager("Measure");
+wait(100);
 
+print("11");
 
 
 //save results
 saveAs("Results", outdir+File.separator+myimage+"SNR Results.csv");
 run("Clear Results");
+wait(100);
+
+print("12");
 
 //take screenshots
-selectWindow(myimage);
+selectWindow(myimage2);
+print("13");
+
 setLocation(1,1,1028,1028);
 myscreenshot=screenshot_dir+File.separator+myimage+"_SNR.png";
 roiManager("show all");
+print("14");
+
 wait(100);
 exec("screencapture", myscreenshot);
+print("15");
+
 setLocation(1,1,300,300);
 
 close("*dup*");
+print("15");
 
 
 }
@@ -181,8 +218,10 @@ function find_phantom_centre(){
 //Finds x,y position in the centre of the phantom
 name = "edge image";
 run("Duplicate...", "title=&name");
+rename(name);
 
 run("Find Edges");
+wait(100);
 
 
 makeRectangle(0, 0, getWidth, getHeight);
@@ -196,7 +235,7 @@ if  ( abs(xcent- midx)  <=  midx/4  ){
  break;}
 }
 
-selectWindow("edge image");
+selectWindow(name);
 run("Rotate 90 Degrees Left");
 makeRectangle(0, 0, getWidth, getHeight);
 Yprofile = getProfile();

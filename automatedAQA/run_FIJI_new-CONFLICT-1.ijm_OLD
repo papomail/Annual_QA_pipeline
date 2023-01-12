@@ -1,3 +1,30 @@
+// RUNS MAGNetQA TESTS
+close("*");
+roiManager("reset");
+
+home_path=getDirectory("home");
+
+script_path = "/Users/papo/Sync/Projects/Annual_QA_pipeline/automatedAQA/MagNET_QA_scripts/" 
+print(script_path) ;
+BC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/BC_SNR_TRA_3";
+BC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/BC_SNR_TRA_2";
+BC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/BC_SNR_COR_4";
+BC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/BC_SNR_COR_5";
+BC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/BC_SNR_SAG_7";
+BC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/BC_SNR_SAG_6";
+HNC_SNR_TRA_1 = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/HNC_SNR_TRA_20";
+HNC_SNR_TRA_2 = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/HNC_SNR_TRA_21";
+HNC_SNR_COR_1 = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/HNC_SNR_COR_23";
+HNC_SNR_COR_2 = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/HNC_SNR_COR_22";
+HNC_SNR_SAG_1 = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/HNC_SNR_SAG_25";
+HNC_SNR_SAG_2 = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/HNC_SNR_SAG_24";
+GEOMETRY_TRA = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/BC_GEO_TRA_14";
+GEOMETRY_COR = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/BC_GEO_COR_18";
+GEOMETRY_SAG = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/BC_GEO_SAG_16";
+SLICE_POS = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/BC_SP_TRA_12";
+GHOSTING_1 = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/HNC_GHO_TRA_2AV_28";
+GHOSTING_2 = "/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/HNC_GHO_TRA_1AV_27";
+Results_dir="/Users/papo/Sync/MRdata/QA/QA_PORTLAND/Portland2022/DATA_ORGANISED/FIJI_Results";
 
 
 //Create Results_dir folder
